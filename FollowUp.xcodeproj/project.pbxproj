@@ -26,6 +26,7 @@
 		5F76577018131CAA00DF3A17 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F76574818131CA900DF3A17 /* CoreData.framework */; };
 		5F76577818131CAB00DF3A17 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5F76577618131CAB00DF3A17 /* InfoPlist.strings */; };
 		5F76577A18131CAB00DF3A17 /* FollowUpTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F76577918131CAB00DF3A17 /* FollowUpTests.m */; };
+		5F7657851813262A00DF3A17 /* CardCaptureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F7657841813262A00DF3A17 /* CardCaptureViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,8 @@
 		5F76577518131CAB00DF3A17 /* FollowUpTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FollowUpTests-Info.plist"; sourceTree = "<group>"; };
 		5F76577718131CAB00DF3A17 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5F76577918131CAB00DF3A17 /* FollowUpTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FollowUpTests.m; sourceTree = "<group>"; };
+		5F7657831813262A00DF3A17 /* CardCaptureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardCaptureViewController.h; sourceTree = "<group>"; };
+		5F7657841813262A00DF3A17 /* CardCaptureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardCaptureViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +131,8 @@
 				5F76575318131CAA00DF3A17 /* AppDelegate.h */,
 				5F76575418131CAA00DF3A17 /* AppDelegate.m */,
 				5F76575618131CAA00DF3A17 /* Main_iPhone.storyboard */,
+				5F7657831813262A00DF3A17 /* CardCaptureViewController.h */,
+				5F7657841813262A00DF3A17 /* CardCaptureViewController.m */,
 				5F76575918131CAA00DF3A17 /* Main_iPad.storyboard */,
 				5F76575F18131CAA00DF3A17 /* MasterViewController.h */,
 				5F76576018131CAA00DF3A17 /* MasterViewController.m */,
@@ -272,6 +277,7 @@
 				5F76575518131CAA00DF3A17 /* AppDelegate.m in Sources */,
 				5F76575E18131CAA00DF3A17 /* FollowUp.xcdatamodeld in Sources */,
 				5F76575118131CAA00DF3A17 /* main.m in Sources */,
+				5F7657851813262A00DF3A17 /* CardCaptureViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

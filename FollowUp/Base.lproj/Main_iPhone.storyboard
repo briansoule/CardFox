@@ -59,12 +59,37 @@
                     <toolbarItems>
                         <barButtonItem title="New Card" id="LMJ-7d-c4s"/>
                     </toolbarItems>
-                    <navigationItem key="navigationItem" title="Master" id="tQt-TN-PWz"/>
+                    <navigationItem key="navigationItem" title="Master" id="tQt-TN-PWz">
+                        <barButtonItem key="rightBarButtonItem" title="New" id="D1t-I1-GL8">
+                            <connections>
+                                <segue destination="rcc-r8-fgt" kind="push" id="zq9-cl-zYP"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Cn-md-YlS" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="459" y="64"/>
+        </scene>
+        <!--Card Capture View Controller-->
+        <scene sceneID="iaL-gf-zyN">
+            <objects>
+                <viewController storyboardIdentifier="CardCaptureViewIdentifier" useStoryboardIdentifierAsRestorationIdentifier="YES" id="rcc-r8-fgt" customClass="CardCaptureViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZXS-Gl-aqT"/>
+                        <viewControllerLayoutGuide type="bottom" id="qD6-cx-RrG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="01l-CD-lGE">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Xhv-MS-tdY"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D8C-eK-5Oh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="459" y="-600"/>
         </scene>
         <!--Detail View Controller - Detail-->
         <scene sceneID="Cn3-H9-jdl">
