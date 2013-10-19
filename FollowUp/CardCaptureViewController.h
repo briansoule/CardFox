@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface CardCaptureViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+- (IBAction)sendButtonTapped:(id)sender;
 
 @end

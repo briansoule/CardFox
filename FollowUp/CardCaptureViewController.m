@@ -72,7 +72,7 @@
 
 - (void) imagePickerControllerDidCancel: (UIImagePickerController *) picker {
     
-    [[picker parentViewController] dismissModalViewControllerAnimated: YES];
+    [self dismissModalViewControllerAnimated: YES];
 }
 
 // For responding to the user accepting a newly-captured picture or movie
@@ -116,4 +116,7 @@
     [self dismissModalViewControllerAnimated: YES];
 }
 
+- (IBAction)sendButtonTapped:(id)sender {
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
 @end
