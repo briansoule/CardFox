@@ -147,11 +147,11 @@
     NSURLSessionUploadTask *uploadTask = [manager uploadTaskWithRequest:request fromFile:filePath progress:nil completionHandler:^(NSURLResponse *response, id responseObject, NSError *error) {
         if (error) {
             NSLog(@"Error: %@", error);
-            [self.navigationController popToRootViewControllerAnimated:YES];
+//            [self.navigationController popToRootViewControllerAnimated:YES];
         } else {
             NSLog(@"Success: %@ %@", response, responseObject);
-            [self.navigationController popToRootViewControllerAnimated:YES];
-            [self.delegate insertNewObject:nil];
+//            [self.navigationController popToRootViewControllerAnimated:YES];
+//            [self.delegate insertNewObject:nil];
         }
     }];
     [uploadTask resume];

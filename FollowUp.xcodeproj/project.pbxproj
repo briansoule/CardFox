@@ -29,6 +29,7 @@
 		5F76577A18131CAB00DF3A17 /* FollowUpTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F76577918131CAB00DF3A17 /* FollowUpTests.m */; };
 		5F7657851813262A00DF3A17 /* CardCaptureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F7657841813262A00DF3A17 /* CardCaptureViewController.m */; };
 		5FCF4B62181451440081F91B /* FollowupApp.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FCF4B61181451440081F91B /* FollowupApp.png */; };
+		5FCF4B64181462150081F91B /* letter.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5FCF4B63181462150081F91B /* letter.jpg */; };
 		F2DA079D678C4FFEA2C7A429 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19886AF8EE934D8FB8519757 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -73,6 +74,7 @@
 		5F7657831813262A00DF3A17 /* CardCaptureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardCaptureViewController.h; sourceTree = "<group>"; };
 		5F7657841813262A00DF3A17 /* CardCaptureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardCaptureViewController.m; sourceTree = "<group>"; };
 		5FCF4B61181451440081F91B /* FollowupApp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FollowupApp.png; sourceTree = "<group>"; };
+		5FCF4B63181462150081F91B /* letter.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = letter.jpg; sourceTree = "<group>"; };
 		B0F5DDE6D3F8451298F7DA3D /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -155,6 +157,7 @@
 				5F5D594318136037009F7A4F /* TemplateChooserViewController.h */,
 				5F5D594418136037009F7A4F /* TemplateChooserViewController.m */,
 				5FCF4B61181451440081F91B /* FollowupApp.png */,
+				5FCF4B63181462150081F91B /* letter.jpg */,
 			);
 			path = FollowUp;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 				5F76575B18131CAA00DF3A17 /* Main_iPad.storyboard in Resources */,
 				5FCF4B62181451440081F91B /* FollowupApp.png in Resources */,
 				5F76576618131CAA00DF3A17 /* Images.xcassets in Resources */,
+				5FCF4B64181462150081F91B /* letter.jpg in Resources */,
 				5F76575818131CAA00DF3A17 /* Main_iPhone.storyboard in Resources */,
 				5F76574F18131CAA00DF3A17 /* InfoPlist.strings in Resources */,
 			);
