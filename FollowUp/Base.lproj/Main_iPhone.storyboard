@@ -59,13 +59,7 @@
                     <toolbarItems>
                         <barButtonItem title="New Card" id="LMJ-7d-c4s"/>
                     </toolbarItems>
-                    <navigationItem key="navigationItem" title="Master" id="tQt-TN-PWz">
-                        <barButtonItem key="rightBarButtonItem" title="New" id="D1t-I1-GL8">
-                            <connections>
-                                <segue destination="rcc-r8-fgt" kind="push" id="zq9-cl-zYP"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Follow Ups" id="tQt-TN-PWz"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Cn-md-YlS" sceneMemberID="firstResponder"/>

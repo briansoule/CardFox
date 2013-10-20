@@ -10,6 +10,8 @@
 
 #import "DetailViewController.h"
 
+#import "CardCaptureViewController.h"
+
 @interface MasterViewController ()
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
 @end
@@ -31,9 +33,19 @@
 	// Do any additional setup after loading the view, typically from a nib.
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
 
-//    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
-//    self.navigationItem.rightBarButtonItem = addButton;
+    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(pushCaptureViewController)];
+    self.navigationItem.rightBarButtonItem = addButton;
+    
      self.detailViewController = (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
+}
+
+- (void)pushCaptureViewController {
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main_iPhone" bundle:nil];
+    CardCaptureViewController *cardCaptureViewController = (CardCaptureViewController *)[storyboard instantiateViewControllerWithIdentifier:@"CardCaptureViewIdentifier"];
+    
+    cardCaptureViewController.delegate = self;
+    [self.navigationController pushViewController:cardCaptureViewController animated:YES];
+
 }
 
 - (void)didReceiveMemoryWarning

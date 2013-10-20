@@ -7,6 +7,8 @@
 //
 
 #import "CardCaptureViewController.h"
+#import "AFNetworking.h"
+#import "MasterViewController.h"
 
 @interface CardCaptureViewController ()
 
@@ -99,6 +101,8 @@
         
         // Save the new image (original or edited) to the Camera Roll
         UIImageWriteToSavedPhotosAlbum (imageToSave, nil, nil , nil);
+        self.savedImage = imageToSave;
+        
     }
     
     // Handle a movie capture
@@ -117,6 +121,37 @@
 }
 
 - (IBAction)sendButtonTapped:(id)sender {
+    [self uploadImage];
+}
+
+- (void)uploadImage {
+    NSData *imageData = UIImageJPEGRepresentation(self.savedImage, 0.9);
+    [imageData writeToURL:[NSURL fileURLWithPath:@"file://documents/image.jpeg"] atomically:YES];
+    
+    NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
+    AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
+    
+    NSURL *URL = [NSURL URLWithString:@"http://example.com/upload"];
+    NSURLRequest *request = [NSURLRequest requestWithURL:URL];
+    
+    NSURL *filePath = [NSURL fileURLWithPath:@"file://documents/image.jpeg"];
+    NSURLSessionUploadTask *uploadTask = [manager uploadTaskWithRequest:request fromFile:filePath progress:nil completionHandler:^(NSURLResponse *response, id responseObject, NSError *error) {
+        if (error) {
+            NSLog(@"Error: %@", error);
+            [self.navigationController popToRootViewControllerAnimated:YES];
+        } else {
+            NSLog(@"Success: %@ %@", response, responseObject);
+            [self.navigationController popToRootViewControllerAnimated:YES];
+            [self.delegate insertNewObject:nil];
+        }
+    }];
+    [uploadTask resume];
+    
+//    UIWindow *window = [UIApplication sharedApplication].keyWindow;
+//    MasterViewController *rootViewController = (MasterViewController *)window.rootViewController;
+//    
+    
     [self.navigationController popToRootViewControllerAnimated:YES];
+    [self.delegate insertNewObject:nil];
 }
 @end

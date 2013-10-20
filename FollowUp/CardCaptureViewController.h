@@ -9,6 +9,16 @@
 #import <UIKit/UIKit.h>
 
 @interface CardCaptureViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+{
+    id __unsafe_unretained delegate;
+}
+
+@property (unsafe_unretained) id delegate;
+
+@property (nonatomic, retain) UIImage * savedImage;
+
+
+
 - (IBAction)sendButtonTapped:(id)sender;
 
 @end
