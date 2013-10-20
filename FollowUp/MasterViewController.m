@@ -30,6 +30,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    UIImage *image = [UIImage imageNamed:@"FollowupApp.png"];
+    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:image];
+                                     
 	// Do any additional setup after loading the view, typically from a nib.
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
 
@@ -240,8 +244,20 @@
 
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    [dateFormat setDateFormat:@"yyyy-MM-dd"];
+    
+    NSDateFormatter *timeFormat = [[NSDateFormatter alloc] init];
+    [timeFormat setDateFormat:@"HH:mm:ss"];
+
+    
     NSManagedObject *object = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    cell.textLabel.text = [[object valueForKey:@"timeStamp"] description];
+    NSDate *date = [object valueForKey:@"timeStamp"];
+    
+    NSString *theDate = [dateFormat stringFromDate:date];
+    NSString *theTime = [timeFormat stringFromDate:date];
+    
+    cell.textLabel.text = [[[@"Sent: " stringByAppendingString:theDate] stringByAppendingString:@", "] stringByAppendingString:theTime];
 }
 
 @end

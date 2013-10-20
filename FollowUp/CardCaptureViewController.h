@@ -14,10 +14,13 @@
 }
 
 @property (unsafe_unretained) id delegate;
+@property (weak, nonatomic) IBOutlet UITextView *letterCopy;
 
 @property (nonatomic, retain) UIImage * savedImage;
 
 
+
+- (IBAction)templateChooser:(id)sender;
 
 - (IBAction)sendButtonTapped:(id)sender;
 

@@ -19,11 +19,14 @@ PODS:
   - AFNetworking/Serialization (2.0.1)
   - AFNetworking/UIKit (2.0.1):
     - AFNetworking/NSURLConnection
+  - FlatUIKit (1.2)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.0)
+  - FlatUIKit
 
 SPEC CHECKSUMS:
   AFNetworking: a6f11ac4ac087303e6ff87adc1ba57b0dac20ef8
+  FlatUIKit: 43b2acaa6f4ef57539b51b00e4ce62d506e33e11
 
 COCOAPODS: 0.26.2

@@ -9,6 +9,7 @@
 #import "CardCaptureViewController.h"
 #import "AFNetworking.h"
 #import "MasterViewController.h"
+#import "TemplateChooserViewController.h"
 
 @interface CardCaptureViewController ()
 
@@ -120,6 +121,14 @@
     [self dismissModalViewControllerAnimated: YES];
 }
 
+- (IBAction)templateChooser:(id)sender {
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main_iPhone" bundle:nil];
+    TemplateChooserViewController *templateChooserViewController = (TemplateChooserViewController *)[storyboard instantiateViewControllerWithIdentifier:@"TemplateChooserViewIdentifier"];
+    
+    templateChooserViewController.delegate = self;
+    [self.navigationController pushViewController:templateChooserViewController animated:YES];
+}
+
 - (IBAction)sendButtonTapped:(id)sender {
     [self uploadImage];
 }
@@ -131,7 +140,7 @@
     NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
     AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
     
-    NSURL *URL = [NSURL URLWithString:@"http://example.com/upload"];
+    NSURL *URL = [NSURL URLWithString:@"http://cardfox.herokuapp.com/image"];
     NSURLRequest *request = [NSURLRequest requestWithURL:URL];
     
     NSURL *filePath = [NSURL fileURLWithPath:@"file://documents/image.jpeg"];
